@@ -5,10 +5,10 @@ services:
   - docker
 
 before_install:
-  - docker build -t TracyInKCPersonal/docker-react -f Dockerfile.dev .
+  - docker build -t tracyinkcpersonal/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true TracyInKCPersonal/docker-react npm run test
+  - docker run -e CI=true tracyinkcpersonal/docker-react npm run test
 
 deploy:
   provider: elasticbeanstalk
